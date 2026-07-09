@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #faf8f5;
+  --foreground: #3d3d3d;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-gold {
+    color: #c9a227;
+  }
+
+  .bg-gold {
+    background-color: #c9a227;
+  }
+
+  .border-gold {
+    border-color: #c9a227;
+  }
+}
+
+/* Reduced motion: strip decorative animation, keep instant reveals */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Petal particle */
+.petal {
+  position: absolute;
+  top: 0;
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+/* Envelope scene */
+.envelope-scene {
+  perspective: 1600px;
+}
+
+.paper-texture {
+  background-image: radial-gradient(circle at 20% 20%, rgba(201, 162, 39, 0.05), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(216, 167, 177, 0.06), transparent 45%);
+}
