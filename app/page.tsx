@@ -1,5 +1,6 @@
 import EnvelopeLanding from "@/components/EnvelopeLanding";
 import Welcome from "@/components/Welcome";
+import Gallery from "@/components/Gallery";
 import EventDetails from "@/components/EventDetails";
 import Countdown from "@/components/Countdown";
 import RSVPForm from "@/components/RSVPForm";
@@ -11,6 +12,7 @@ export default function Home() {
     <main>
       <EnvelopeLanding />
       <Welcome />
+      <Gallery />
       <EventDetails />
       <Countdown />
       <RSVPForm />
