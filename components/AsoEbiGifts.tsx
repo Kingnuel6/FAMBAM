@@ -37,20 +37,17 @@ export default function AsoEbiGifts() {
           <div className="mt-6 space-y-3 rounded-md bg-ivory p-6 font-body text-sm text-charcoal/80">
             <div className="flex justify-between">
               <span className="text-charcoal/50">Account Name</span>
-              <span>FamBam 2026 Wedding (Placeholder)</span>
+              <span>Oluwatoyin Olatunji Daniel</span>
             </div>
             <div className="flex justify-between">
               <span className="text-charcoal/50">Account Number</span>
-              <span>0000000000</span>
+              <span>0014657424</span>
             </div>
             <div className="flex justify-between">
               <span className="text-charcoal/50">Bank</span>
-              <span>To be announced</span>
+              <span>GTBank</span>
             </div>
           </div>
-          <p className="mt-4 text-center font-body text-xs text-charcoal/50">
-            Full payment details will be shared closer to the RSVP deadline.
-          </p>
         </motion.div>
 
         <motion.div

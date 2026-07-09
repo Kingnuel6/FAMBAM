@@ -14,6 +14,8 @@ const config: Config = {
         "dusty-rose": "#D8A7B1",
         sage: "#A8B5A2",
         charcoal: "#3D3D3D",
+        cream: "#F3E9DA",
+        espresso: "#241209",
       },
       fontFamily: {
         heading: ["var(--font-heading)", "serif"],

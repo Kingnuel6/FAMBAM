@@ -63,3 +63,19 @@ body {
   background-image: radial-gradient(circle at 20% 20%, rgba(201, 162, 39, 0.05), transparent 40%),
     radial-gradient(circle at 80% 80%, rgba(216, 167, 177, 0.06), transparent 45%);
 }
+
+/* Welcome scene: warm dark gradient with hexagon texture (combined into one
+   background-image stack since a plain `background:` shorthand and a
+   separate `background-image:` rule on the same element fight over the
+   cascade instead of layering). */
+.welcome-gradient {
+  background-image: linear-gradient(30deg, rgba(201, 162, 39, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(201, 162, 39, 0.02) 87.5%, rgba(201, 162, 39, 0.02)),
+    linear-gradient(150deg, rgba(201, 162, 39, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(201, 162, 39, 0.02) 87.5%, rgba(201, 162, 39, 0.02)),
+    linear-gradient(30deg, rgba(201, 162, 39, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(201, 162, 39, 0.02) 87.5%, rgba(201, 162, 39, 0.02)),
+    linear-gradient(150deg, rgba(201, 162, 39, 0.02) 12%, transparent 12.5%, transparent 87%, rgba(201, 162, 39, 0.02) 87.5%, rgba(201, 162, 39, 0.02)),
+    linear-gradient(60deg, rgba(201, 162, 39, 0.03) 25%, transparent 25.5%, transparent 75%, rgba(201, 162, 39, 0.03) 75%, rgba(201, 162, 39, 0.03)),
+    linear-gradient(60deg, rgba(201, 162, 39, 0.03) 25%, transparent 25.5%, transparent 75%, rgba(201, 162, 39, 0.03) 75%, rgba(201, 162, 39, 0.03)),
+    radial-gradient(ellipse 120% 90% at 50% 35%, #6b3c22 0%, #4a2a18 45%, #241209 100%);
+  background-size: 88px 152px, 88px 152px, 88px 152px, 88px 152px, 88px 152px, 88px 152px, 100% 100%;
+  background-position: 0 0, 0 0, 44px 76px, 44px 76px, 0 0, 44px 76px, center;
+}
