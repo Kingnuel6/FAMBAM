@@ -34,12 +34,12 @@ const cards: DetailCard[] = [
       <>
         <p>We&apos;ve curated luxury stays near the venue.</p>
         <a
-          href="https://bit.ly/fambam"
+          href="https://fambam-marrakech-2026.netlify.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-2 inline-block underline decoration-gold decoration-1 underline-offset-4 text-gold"
         >
-          bit.ly/fambam
+          View accommodations
         </a>
       </>
     ),

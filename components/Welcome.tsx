@@ -56,7 +56,9 @@ export default function Welcome() {
         </motion.p>
 
         <motion.a
-          href="#details"
+          href="https://fambam-marrakech-2026.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
           variants={fadeUp}
           className="mt-10 rounded-full border border-gold px-8 py-3 font-body text-sm uppercase tracking-[0.2em] text-gold transition hover:bg-gold hover:text-espresso"
         >

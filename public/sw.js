@@ -1,4 +1,4 @@
-const CACHE_NAME = "fambam-2026-v1";
+const CACHE_NAME = "fambam-2026-v2";
 const PRECACHE_URLS = ["/", "/manifest.json", "/icons/icon.svg"];
 
 self.addEventListener("install", (event) => {
@@ -22,19 +22,20 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
 
+  // Network-first: always serve the latest deployment when online, and only
+  // fall back to the cache when the network is unreachable. A cache-first
+  // strategy here would keep serving whatever was cached on the visitor's
+  // very first visit indefinitely, since the background cache refresh only
+  // takes effect on the *next* load.
   event.respondWith(
-    caches.match(event.request).then((cached) => {
-      const network = fetch(event.request)
-        .then((response) => {
-          if (response && response.status === 200) {
-            const clone = response.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
-          }
-          return response;
-        })
-        .catch(() => cached);
-
-      return cached || network;
-    })
+    fetch(event.request)
+      .then((response) => {
+        if (response && response.status === 200) {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+        }
+        return response;
+      })
+      .catch(() => caches.match(event.request))
   );
 });
