@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import Petals from "./Petals";
 
@@ -12,8 +13,19 @@ export default function Welcome() {
   return (
     <section
       id="welcome"
-      className="welcome-gradient relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 py-24 text-center"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 py-24 text-center"
     >
+      <Image
+        src="https://images.pexels.com/photos/35179854/pexels-photo-35179854.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        alt="A lush Moroccan courtyard framed by an ornate archway"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-espresso/55" />
+      <div className="absolute inset-0 bg-gradient-to-b from-espresso/40 via-transparent to-espresso/60" />
+
       <Petals count={10} />
 
       <motion.div
@@ -21,49 +33,36 @@ export default function Welcome() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.5 }}
-        variants={{ show: { transition: { staggerChildren: 0.22 } } }}
+        variants={{ show: { transition: { staggerChildren: 0.3 } } }}
       >
         <motion.p
           variants={fadeUp}
-          className="font-body text-xs uppercase tracking-[0.35em] text-gold sm:text-sm"
+          className="font-heading text-xl italic text-cream/90 sm:text-2xl"
         >
-          You are warmly invited to celebrate
-        </motion.p>
-
-        <motion.div variants={fadeUp} className="mt-6 flex items-center gap-3">
-          <span className="h-px w-10 bg-gold/50" />
-          <span className="text-gold">✦</span>
-          <span className="h-px w-10 bg-gold/50" />
-        </motion.div>
-
-        <motion.p variants={fadeUp} className="mt-6 font-body text-xs uppercase tracking-[0.35em] text-gold/90">
-          #FamBam2026
+          Together with our families
         </motion.p>
 
         <motion.h1
           variants={fadeUp}
-          className="mt-6 font-heading text-5xl leading-[1.35] text-cream sm:text-6xl md:text-7xl lg:text-8xl"
+          className="mt-6 font-script text-6xl leading-tight text-gold sm:text-7xl md:text-8xl"
         >
-          Ibukun <span className="font-script text-gold">&amp;</span> Ayobami
+          Ibukun &amp; Ayobami
         </motion.h1>
 
-        <motion.p variants={fadeUp} className="mt-10 font-heading text-2xl text-cream/90 sm:text-3xl">
-          November 19 &amp; 20, 2026
+        <motion.p variants={fadeUp} className="mt-8 font-body text-sm uppercase tracking-[0.3em] text-cream/80">
+          November 19 &amp; 20, 2026 — Marrakech, Morocco
         </motion.p>
+      </motion.div>
 
-        <motion.p variants={fadeUp} className="mt-3 font-body text-sm uppercase tracking-[0.3em] text-cream/70">
-          Palmeraie, Marrakech — Morocco
-        </motion.p>
-
-        <motion.a
-          href="https://fambam-marrakech-2026.netlify.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          variants={fadeUp}
-          className="mt-10 rounded-full border border-gold px-8 py-3 font-body text-sm uppercase tracking-[0.2em] text-gold transition hover:bg-gold hover:text-espresso"
-        >
-          View Accommodations ↓
-        </motion.a>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 1, duration: 0.8 }}
+        className="animate-bounce absolute bottom-8 z-10 text-2xl text-cream/80"
+        aria-hidden="true"
+      >
+        ↓
       </motion.div>
     </section>
   );

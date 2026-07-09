@@ -1,4 +1,4 @@
-import EnvelopeLanding from "@/components/EnvelopeLanding";
+import GateIntro from "@/components/GateIntro";
 import Welcome from "@/components/Welcome";
 import Gallery from "@/components/Gallery";
 import EventDetails from "@/components/EventDetails";
@@ -10,7 +10,7 @@ import FinalScene from "@/components/FinalScene";
 export default function Home() {
   return (
     <main>
-      <EnvelopeLanding />
+      <GateIntro />
       <Welcome />
       <Gallery />
       <EventDetails />

@@ -19,7 +19,15 @@ const HUE_COLOR: Record<Petal["hue"], string> = {
   sage: "#A8B5A2",
 };
 
-export default function Petals({ count = 14, className = "" }: { count?: number; className?: string }) {
+export default function Petals({
+  count = 14,
+  className = "",
+  paused = false,
+}: {
+  count?: number;
+  className?: string;
+  paused?: boolean;
+}) {
   const [reduced, setReduced] = useState(false);
 
   useEffect(() => {
@@ -58,6 +66,7 @@ export default function Petals({ count = 14, className = "" }: { count?: number;
               height: `${p.size}px`,
               animationDuration: `${p.duration}s`,
               animationDelay: `${p.delay}s`,
+              animationPlayState: paused ? "paused" : "running",
               "--drift": `${p.drift}px`,
             } as React.CSSProperties
           }
