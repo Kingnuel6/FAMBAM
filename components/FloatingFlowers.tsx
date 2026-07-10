@@ -9,17 +9,17 @@ type Petal = {
   duration: number;
   delay: number;
   drift: number;
-  hue: "rose" | "gold" | "sage";
+  hue: "sage" | "gold" | "beige";
   rotate: number;
 };
 
 const HUE_COLOR: Record<Petal["hue"], string> = {
-  rose: "#D8A7B1",
-  gold: "#C9A227",
-  sage: "#A8B5A2",
+  sage: "#A8B59A",
+  gold: "#C9A45A",
+  beige: "#EDE4D3",
 };
 
-export default function Petals({
+export default function FloatingFlowers({
   count = 14,
   className = "",
   paused = false,
@@ -46,7 +46,7 @@ export default function Petals({
       duration: 14 + Math.random() * 12,
       delay: Math.random() * 14,
       drift: (Math.random() - 0.5) * 160,
-      hue: (["rose", "gold", "sage"] as const)[Math.floor(Math.random() * 3)],
+      hue: (["sage", "gold", "beige"] as const)[Math.floor(Math.random() * 3)],
       rotate: Math.random() * 360,
     }));
   }, [count]);

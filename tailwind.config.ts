@@ -9,13 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ivory: "#FAF8F5",
-        gold: "#C9A227",
-        "dusty-rose": "#D8A7B1",
-        sage: "#A8B5A2",
+        ivory: "#FAF8F3",
+        gold: "#C9A45A",
+        sage: "#A8B59A",
+        beige: "#EDE4D3",
+        forest: "#4F5D48",
         charcoal: "#3D3D3D",
-        cream: "#F3E9DA",
-        espresso: "#241209",
       },
       fontFamily: {
         heading: ["var(--font-heading)", "serif"],
@@ -29,6 +28,10 @@ const config: Config = {
           "90%": { opacity: "1" },
           "100%": { transform: "translateY(110vh) translateX(var(--drift, 40px)) rotate(360deg)", opacity: "0" },
         },
+        sparkle: {
+          "0%, 100%": { opacity: "0", transform: "scale(0.6)" },
+          "50%": { opacity: "0.9", transform: "scale(1)" },
+        },
         glow: {
           "0%, 100%": { opacity: "0.4", transform: "scale(1)" },
           "50%": { opacity: "0.7", transform: "scale(1.08)" },
@@ -37,11 +40,20 @@ const config: Config = {
           "0%, 100%": { transform: "scale(1)", opacity: "1" },
           "50%": { transform: "scale(1.06)", opacity: "0.85" },
         },
+        bloom: {
+          "0%": { opacity: "0", transform: "scale(0.4) rotate(-8deg)" },
+          "100%": { opacity: "1", transform: "scale(1) rotate(0deg)" },
+        },
       },
       animation: {
         "petal-fall": "petal-fall linear infinite",
+        sparkle: "sparkle ease-in-out infinite",
         glow: "glow 6s ease-in-out infinite",
         "pulse-soft": "pulse-soft 2.4s ease-in-out infinite",
+        bloom: "bloom 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+      },
+      transitionTimingFunction: {
+        "editorial": "cubic-bezier(0.22, 1, 0.36, 1)",
       },
     },
   },

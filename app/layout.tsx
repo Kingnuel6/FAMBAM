@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter, Great_Vibes } from "next/font/google";
 import "./globals.css";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
+import Layout from "@/components/Layout";
 
 const heading = Cormorant_Garamond({
   subsets: ["latin"],
@@ -57,7 +58,7 @@ export default function RootLayout({
       <body
         className={`${heading.variable} ${body.variable} ${script.variable} font-body bg-ivory text-charcoal antialiased overflow-x-hidden`}
       >
-        {children}
+        <Layout>{children}</Layout>
         <ServiceWorkerRegister />
       </body>
     </html>

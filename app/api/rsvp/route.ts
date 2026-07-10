@@ -1,27 +1,22 @@
 import { NextResponse } from "next/server";
-
-type RsvpPayload = {
-  name?: string;
-  attending?: string;
-  guests?: string;
-  message?: string;
-};
+import { rsvpSchema } from "@/lib/rsvpSchema";
 
 export async function POST(request: Request) {
-  const body: RsvpPayload = await request.json().catch(() => ({}));
+  const body = await request.json().catch(() => null);
+  const parsed = rsvpSchema.safeParse(body);
 
-  if (!body.name || !body.attending) {
+  if (!parsed.success) {
     return NextResponse.json(
-      { ok: false, error: "Name and attendance response are required." },
+      { ok: false, error: parsed.error.issues[0]?.message ?? "Invalid submission." },
       { status: 400 }
     );
   }
 
+  // No durable backend is wired up yet — this logs server-side so
+  // submissions are visible in deployment logs until real persistence
+  // (e.g. Supabase) is added.
   console.log("[FamBam2026 RSVP]", {
-    name: body.name,
-    attending: body.attending,
-    guests: body.guests ?? "1",
-    message: body.message ?? "",
+    ...parsed.data,
     receivedAt: new Date().toISOString(),
   });
 

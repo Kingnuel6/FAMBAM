@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #faf8f5;
+  --background: #faf8f3;
   --foreground: #3d3d3d;
 }
 
@@ -19,18 +19,6 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-
-  .text-gold {
-    color: #c9a227;
-  }
-
-  .bg-gold {
-    background-color: #c9a227;
-  }
-
-  .border-gold {
-    border-color: #c9a227;
   }
 }
 
@@ -54,38 +42,21 @@ body {
   pointer-events: none;
 }
 
-/* Gate intro fallback: two 3D-rotating panels standing in for the video */
-.gate-scene {
+/* Envelope scene (Scene 0 opening) */
+.envelope-scene {
   perspective: 1800px;
 }
 
-.gate-panel {
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  background-color: #7a4d28;
-  /* CSS background-image layers stack with the FIRST listed on top —
-     the vine SVG and wood-grain lines must come before the opaque base
-     gradient, or the opaque layer paints over them and hides them. */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='240' viewBox='0 0 120 240'%3E%3Cg fill='none' stroke='%23E8C158' stroke-width='2.5' opacity='0.75'%3E%3Cpath d='M20 20c15 10 15 30 0 40s-15 30 0 40 15 30 0 40 -15 30 0 40'/%3E%3Ccircle cx='20' cy='40' r='9' fill='%23E8C158' fill-opacity='0.5'/%3E%3Ccircle cx='20' cy='100' r='9' fill='%23E8C158' fill-opacity='0.5'/%3E%3Ccircle cx='20' cy='160' r='9' fill='%23E8C158' fill-opacity='0.5'/%3E%3Ccircle cx='20' cy='220' r='9' fill='%23E8C158' fill-opacity='0.5'/%3E%3C/g%3E%3C/svg%3E"),
+.envelope-paper {
+  background-color: #a8b59a;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(0, 0, 0, 0.06), transparent 45%),
     repeating-linear-gradient(
-      0deg,
-      rgba(201, 162, 39, 0.35) 0px,
-      rgba(201, 162, 39, 0.35) 2px,
-      transparent 2px,
-      transparent 64px
-    ),
-    linear-gradient(180deg, #8a5a2f 0%, #6b4423 55%, #5c3a1f 100%);
-  background-repeat: repeat-y, repeat-y, no-repeat;
-  background-size: 120px 240px, 100% 64px, 100% 100%;
-  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.35);
-}
-
-.gate-panel-left {
-  border-right: 2px solid rgba(201, 162, 39, 0.6);
-  background-position: left 4px top, 0 0, 0 0;
-}
-
-.gate-panel-right {
-  border-left: 2px solid rgba(201, 162, 39, 0.6);
-  background-position: right 4px top, 0 0, 0 0;
+      115deg,
+      rgba(255, 255, 255, 0.025) 0px,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px,
+      transparent 3px
+    );
 }
