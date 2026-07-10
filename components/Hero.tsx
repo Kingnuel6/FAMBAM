@@ -63,7 +63,7 @@ export default function Hero() {
 
         <AnimatedItem delay={0.2}>
           <p className="mt-8 font-body text-sm uppercase tracking-[0.3em] text-charcoal/70">
-            {wedding.dates.display} — {wedding.location.city}
+            {wedding.dates.display} · {wedding.location.city}
           </p>
         </AnimatedItem>
 

@@ -15,7 +15,7 @@ export const wedding = {
   },
 
   dates: {
-    // ISO strings — the countdown and any date math read from `start`.
+    // ISO strings; the countdown and any date math read from `start`.
     start: "2026-11-19T00:00:00",
     end: "2026-11-20T00:00:00",
     display: "November 19 & 20, 2026",
@@ -36,7 +36,7 @@ export const wedding = {
   },
 
   gettingThere:
-    "Fly into Marrakech Menara Airport (RAK) — approx. 20 minutes to the venue.",
+    "Fly into Marrakech Menara Airport (RAK), approx. 20 minutes to the venue.",
 
   schedule: [
     {
@@ -58,10 +58,10 @@ export const wedding = {
   dressCode: {
     summary: "Garden formal",
     // TODO: confirm exact palette/notes for guests before publishing.
-    note: "Soft, warm tones — think ivory, sage, gold, and earth tones. Comfortable shoes recommended for garden terrain.",
+    note: "Soft, warm tones: think ivory, sage, gold, and earth tones. Comfortable shoes recommended for garden terrain.",
   },
 
-  weather: "Marrakech in November is mild — expect warm days (~22°C) and cool evenings (~12°C).",
+  weather: "Marrakech in November is mild; expect warm days (~22°C) and cool evenings (~12°C).",
 
   accommodation: {
     intro: "We've curated a few recommended stays near the venue.",
@@ -75,10 +75,10 @@ export const wedding = {
         contact: "Details on the accommodation site",
       },
       {
-        name: "Nearby Riad (placeholder)",
-        description: "A short drive from the venue — full list coming soon.",
+        name: "Palais Mirage d'Atlas Hotel",
+        description: "A comfortable stay just a short drive from the venue.",
         link: "https://fambam-marrakech-2026.netlify.app/",
-        contact: "TBA",
+        contact: "Details on the accommodation site",
       },
     ],
   },

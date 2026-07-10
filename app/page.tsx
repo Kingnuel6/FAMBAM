@@ -11,6 +11,7 @@ import GiftRegistry from "@/components/GiftRegistry";
 import Accommodation from "@/components/Accommodation";
 import FinalScene from "@/components/FinalScene";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <Accommodation />
       <FinalScene />
       <Footer />
+      <BackToTop />
     </main>
   );
 }
