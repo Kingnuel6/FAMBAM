@@ -86,7 +86,6 @@ export const wedding = {
     ],
   },
 
-  // TODO: swap the proposal photo for the real one, see README for the pending upload.
   story: [
     {
       date: "Placeholder",
@@ -108,8 +107,7 @@ export const wedding = {
       date: "Placeholder",
       title: "The proposal",
       description: "The moment it became forever.",
-      image:
-        "https://images.pexels.com/photos/31356131/pexels-photo-31356131.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      image: "/images/proposal.avif",
     },
   ],
 
