@@ -38,6 +38,9 @@ export const wedding = {
   gettingThere:
     "Fly into Marrakech Menara Airport (RAK), approx. 20 minutes to the venue.",
 
+  visaInfo:
+    "Good news for Nigerian guests: if you hold a valid, previously used multiple entry visa or residence permit from the UK, US, Canada, Australia, New Zealand, Ireland, Japan, Norway, or any Schengen country, you likely qualify for a Morocco e-visa, with no in-person embassy visit required. Guests without one of these will need to apply in person at the Moroccan Embassy in Abuja, by appointment only.",
+
   schedule: [
     {
       day: "Day One",
@@ -126,7 +129,18 @@ export const wedding = {
 
   registry: {
     asoEbi: {
-      price: "₦150,000 per set",
+      items: [
+        {
+          label: "Ladies",
+          description: "5 Yards Burgundy Velvet Lace with Headtie",
+          price: "₦150,000",
+        },
+        {
+          label: "Gentlemen",
+          description: "8 Yards Fabric with Aso Oke Cap",
+          price: "₦150,000",
+        },
+      ],
       accountName: "Oluwatoyin Olatunji Daniel",
       accountNumber: "0014657424",
       bank: "GTBank",

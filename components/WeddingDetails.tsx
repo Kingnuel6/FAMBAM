@@ -34,7 +34,7 @@ export default function WeddingDetails() {
 
         <AnimatedSection
           stagger={0.1}
-          className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3"
+          className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2"
         >
           <AnimatedItem className="rounded-lg border border-gold/20 bg-white/70 p-8 text-center shadow-sm backdrop-blur-sm">
             <div className="text-2xl">👗</div>
@@ -58,6 +58,14 @@ export default function WeddingDetails() {
             <h3 className="mt-3 font-heading text-xl text-gold">Getting There</h3>
             <p className="mt-2 font-body text-sm leading-relaxed text-charcoal/70">
               {wedding.gettingThere}
+            </p>
+          </AnimatedItem>
+
+          <AnimatedItem className="rounded-lg border border-gold/20 bg-white/70 p-8 text-center shadow-sm backdrop-blur-sm">
+            <div className="text-2xl">🛂</div>
+            <h3 className="mt-3 font-heading text-xl text-gold">Visa Info</h3>
+            <p className="mt-2 font-body text-sm leading-relaxed text-charcoal/70">
+              {wedding.visaInfo}
             </p>
           </AnimatedItem>
         </AnimatedSection>

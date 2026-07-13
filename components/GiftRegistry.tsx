@@ -21,9 +21,24 @@ export default function GiftRegistry() {
           className="mt-12 rounded-lg border border-gold/20 bg-white/70 p-8 text-left backdrop-blur-sm sm:p-10"
         >
           <h3 className="text-center font-heading text-2xl text-gold">Aso Ebi</h3>
-          <p className="mt-2 text-center font-body text-sm text-charcoal/70">{asoEbi.price}</p>
 
-          <div className="mt-6 space-y-3 rounded-md bg-ivory p-6 font-body text-sm text-charcoal/80">
+          <div className="mt-6 space-y-4">
+            {asoEbi.items.map((item) => (
+              <div key={item.label} className="flex items-baseline justify-between gap-4">
+                <div>
+                  <p className="font-body text-sm font-medium text-charcoal/90">{item.label}</p>
+                  <p className="font-body text-xs text-charcoal/60">{item.description}</p>
+                </div>
+                <p className="whitespace-nowrap font-body text-sm text-gold">{item.price}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-6 text-center font-body text-xs uppercase tracking-widest text-charcoal/50">
+            To secure your fabric or outfit, kindly make payment to
+          </p>
+
+          <div className="mt-4 space-y-3 rounded-md bg-ivory p-6 font-body text-sm text-charcoal/80">
             <div className="flex justify-between">
               <span className="text-charcoal/50">Account Name</span>
               <span>{asoEbi.accountName}</span>
