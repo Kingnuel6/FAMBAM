@@ -28,7 +28,7 @@ const script = Great_Vibes({
 export const metadata: Metadata = {
   title: "FamBam 2026 | Ibukun & Ayobami",
   description:
-    "Together with our families, we invite you to celebrate the wedding of Ibukun & Ayobami, November 19 & 20, 2026, Marrakech, Morocco. #FamBam2026",
+    "Together with our families, we invite you to celebrate the wedding of Ibukun & Ayobami, November 19 & 20, 2026, Marrakech, Morocco. #Fambamwedding",
   manifest: "/manifest.json",
   icons: {
     icon: "/icons/icon.svg",

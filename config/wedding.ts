@@ -6,7 +6,7 @@ export const wedding = {
   bride: "Ayobami",
   groom: "Ibukun",
   coupleNames: "Ibukun & Ayobami",
-  hashtag: "#FamBam2026",
+  hashtag: "#Fambamwedding",
   monogram: "I&A",
 
   invitation: {
@@ -86,14 +86,23 @@ export const wedding = {
     ],
   },
 
-  // TODO: replace placeholder milestones with the couple's real story/photos.
+  // TODO: swap the proposal photo for the real one, see README for the pending upload.
   story: [
     {
       date: "Placeholder",
       title: "How we met",
-      description: "The story of how Ibukun & Ayobami's paths first crossed.",
+      description:
+        "It was Detty December in Lagos. Ibukun walked up to Ayobami's table at a party, supposedly to greet a friend, but his real mission was her. She laughed in his face when he said he was going to marry her.",
       image:
         "https://images.pexels.com/photos/34157927/pexels-photo-34157927.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    },
+    {
+      date: "Placeholder",
+      title: "The Distance",
+      description:
+        "A long-distance relationship that taught them to communicate deeply, protect each other's weaknesses, and capitalise on each other's strengths.",
+      image:
+        "https://images.pexels.com/photos/35179854/pexels-photo-35179854.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
     {
       date: "Placeholder",
