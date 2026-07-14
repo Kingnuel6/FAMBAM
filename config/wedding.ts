@@ -39,7 +39,7 @@ export const wedding = {
     "Fly into Marrakech Menara Airport (RAK), approx. 20 minutes to the venue.",
 
   visaInfo:
-    "Good news for Nigerian guests: if you hold a valid, previously used multiple entry visa or residence permit from the UK, US, Canada, Australia, New Zealand, Ireland, Japan, Norway, or any Schengen country, you likely qualify for a Morocco e-visa, with no in-person embassy visit required. Guests without one of these will need to apply in person at the Moroccan Embassy in Abuja, by appointment only.",
+    "Nigerian guests with a valid UK, US, Canada, Australia, New Zealand, Ireland, Japan, Norway, or Schengen visa or residence permit likely qualify for a Morocco e-visa, skipping the in-person Abuja embassy visit. Everyone else applies in person, by appointment.",
 
   schedule: [
     {
@@ -88,7 +88,6 @@ export const wedding = {
 
   story: [
     {
-      date: "Placeholder",
       title: "How we met",
       description:
         "It was Detty December in Lagos. Ibukun walked up to Ayobami's table at a party, supposedly to greet a friend, but his real mission was her. She laughed in his face when he said he was going to marry her.",
@@ -96,7 +95,6 @@ export const wedding = {
         "https://images.pexels.com/photos/34157927/pexels-photo-34157927.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
     {
-      date: "Placeholder",
       title: "The Distance",
       description:
         "A long-distance relationship that taught them to communicate deeply, protect each other's weaknesses, and capitalise on each other's strengths.",
@@ -104,7 +102,6 @@ export const wedding = {
         "https://images.pexels.com/photos/35179854/pexels-photo-35179854.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
     {
-      date: "Placeholder",
       title: "The proposal",
       description: "The moment it became forever.",
       image: "/images/proposal.avif",

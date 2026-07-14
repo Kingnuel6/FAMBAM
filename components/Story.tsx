@@ -39,8 +39,7 @@ export default function Story() {
 
                 <div className="relative w-full text-center sm:w-1/2 sm:text-left">
                   <span className="absolute left-1/2 top-0 hidden h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold sm:block" />
-                  <p className="font-body text-xs uppercase tracking-[0.3em] text-gold">{moment.date}</p>
-                  <h3 className="mt-2 font-heading text-2xl text-charcoal">{moment.title}</h3>
+                  <h3 className="font-heading text-2xl text-charcoal">{moment.title}</h3>
                   <p className="mt-2 font-body text-sm leading-relaxed text-charcoal/70">
                     {moment.description}
                   </p>
